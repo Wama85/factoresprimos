@@ -1,17 +1,22 @@
 class primos{
+  
+  constructor(n){
+    this.n=n;
+    this.resulprimos=[];
+  }
 
-  factorprimo(n){
+  factorprimo(){
     
-   let resulprimos=[];
-   for(let cantidad=2;n>1;cantidad++){
-    while(n%cantidad=== 0){
-      resulprimos.push(cantidad);
-      n/=cantidad;
+   for(let cantidad=2;this.n>1;cantidad++){
+    
+    while(this.n % cantidad=== 0){
+      this.resulprimos.push(cantidad);
+      this.n /=cantidad;
      }
 
     }      
        
-    return resulprimos;
+    return this.resulprimos;
 
   }
 }
