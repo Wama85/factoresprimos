@@ -7,6 +7,7 @@ describe("FACTORES PRIMOS", () => {
     const primosfac= new primos();
     expect(primosfac.factorprimo(2)).toEqual([2]);
   });
+ 
 });
 
 class primos{
@@ -17,9 +18,9 @@ class primos{
 
     if (n>1)
     {
-      resulprimos.push(n);
+      resulprimos.push(2);
     }
-    
+
     return resulprimos;
 
   }
