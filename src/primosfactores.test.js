@@ -11,6 +11,10 @@ describe("FACTORES PRIMOS", () => {
     const primosfac= new primos();
     expect(primosfac.factorprimo(3)).toEqual([3]);
   });
+  it("Debería retornar una lista  para [2,2]", () => {
+    const primosfac= new primos();
+    expect(primosfac.factorprimo(4)).toEqual([2,2]);
+  });
 });
 
 class primos{
@@ -21,7 +25,15 @@ class primos{
 
     if (n>1)
     {
-      resulprimos.push(n);
+      if(n%2 === 0){
+        resulprimos.push(2);
+        n/=2;
+      }
+      if(n>1)
+      {
+        resulprimos.push(n);
+      }
+      
     }
 
     return resulprimos;
